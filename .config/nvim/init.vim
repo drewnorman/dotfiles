@@ -41,7 +41,7 @@ set ttimeout
 nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 
 " Toggle Highlight
-nnoremap <silent> <leader>hl :set hlsearch! hlsearch?<CR>
+nnoremap <silent><expr> <leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
 " Buffer Delete/Kill then Next Buffer
 nnoremap <silent> <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
