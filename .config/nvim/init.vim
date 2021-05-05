@@ -22,6 +22,7 @@ set number
 set relativenumber
 set encoding=UTF-8
 set splitright
+set smartindent
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 set colorcolumn=80
