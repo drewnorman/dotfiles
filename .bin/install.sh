@@ -1,4 +1,4 @@
-git clone --bare git@github.com:drewnorman/dotfiles.git $HOME/.dotfiles
+git clone --bare https://github.com/drewnorman/dotfiles $HOME/.dotfiles
 config() {
    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }
