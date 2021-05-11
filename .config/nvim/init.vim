@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'mhinz/vim-startify'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " General
