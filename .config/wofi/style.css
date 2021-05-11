@@ -1,0 +1,20 @@
+#entry:selected {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+#input {
+  border: none;
+  border-radius: 0px;
+}
+
+#text {
+  margin-left: 1em;
+}
+
+window {
+  opacity: 0.9;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+}
