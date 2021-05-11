@@ -104,7 +104,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Create alias for editing
 alias e='nvim'
+
+# Create alias for dotfiles repository interaction
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 autoload -U +X bashcompinit && bashcompinit
