@@ -106,6 +106,8 @@ export PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# Unalias for graphicsmagick
+unalias gm
 
 # Create alias for editing
 alias e='nvim'
