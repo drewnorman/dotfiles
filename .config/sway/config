@@ -51,7 +51,6 @@ output * bg /usr/share/backgrounds/sway/black-blur-wallpaper.png fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-    timeout 300 'sh ~/.bin/sway/lock-screen.sh' \
     timeout 600 'systemctl hibernate' \
     before-sleep 'sh ~/.bin/sway/lock-screen.sh'
 
