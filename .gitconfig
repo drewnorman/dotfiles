@@ -1,0 +1,7 @@
+[core]
+	editor = nvim
+[user]
+	email = drewnorman739@gmail.com
+	name = Drew Norman
+[credential]
+	helper = cache
