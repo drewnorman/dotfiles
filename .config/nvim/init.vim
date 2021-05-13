@@ -36,7 +36,7 @@ filetype plugin on
 
 " Theme
 colorscheme srcery
-let g:airline_theme="srcery"
+let g:airline_theme="srcery.vim"
 
 " Disable Leader Timeout
 set notimeout
