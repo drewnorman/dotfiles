@@ -10,8 +10,7 @@ Plug 'leafOfTree/vim-vue-plugin'
 Plug 'mhinz/vim-signify'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'tmsvg/pear-tree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'mhinz/vim-startify'
@@ -37,7 +36,7 @@ filetype plugin on
 
 " Theme
 colorscheme srcery
-let g:airline_theme="simple"
+let g:lightline = { 'colorscheme': 'srcery', }
 
 " Disable Leader Timeout
 set notimeout
