@@ -6,6 +6,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'leafOfTree/vim-vue-plugin'
 Plug 'mhinz/vim-signify'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'tmsvg/pear-tree'
@@ -27,6 +28,8 @@ set splitright
 set autoindent
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd BufNewFile,BufRead *.vue set ft=vue
+autocmd FileType vue setlocal shiftwidth=2 tabstop=2
 set colorcolumn=80
 set textwidth=80
 filetype plugin on
