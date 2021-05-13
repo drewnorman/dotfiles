@@ -1,6 +1,6 @@
 " Plugins
 call plug#begin('~/.vimplugins')
-Plug 'bignimbus/pop-punk.vim'
+Plug 'srcery-colors/srcery-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -32,9 +32,8 @@ set textwidth=80
 filetype plugin on
 
 " Theme
-colorscheme "pop-punk"
-let g:terminal_ansi_colors = pop_punk#AnsiColors()
-let g:airline_theme = 'pop_punk'
+colorscheme srcery
+let g:airline_theme="srcery"
 
 " Disable Leader Timeout
 set notimeout
