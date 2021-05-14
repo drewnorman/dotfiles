@@ -30,7 +30,7 @@ gaps outer 8
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/black-blur-wallpaper.png fill
+output * bg $HOME/.wallpapers/black.jpg fill
 #
 # Example configuration:
 #
