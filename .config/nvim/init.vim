@@ -48,6 +48,9 @@ nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 " Toggle Highlight
 nnoremap <silent><expr> <leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
+" Quick Save
+noremap <silent> <leader>ss :w<CR>
+
 " Buffer Delete/Kill then Next Buffer
 nnoremap <silent> <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
 nnoremap <silent> <leader>bk :bp<bar>sp<bar>bn<bar>bd!<CR>
