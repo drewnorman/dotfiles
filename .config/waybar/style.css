@@ -10,7 +10,7 @@
 window#waybar {
     padding: 20px;
     background-color: transparent;
-    color: #ffffff;
+    color: #d0bfa1;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -29,14 +29,14 @@ window#waybar.solo {
 */
 
 window#waybar.chromium {
-    background-color: #000000;
+    background-color: #1c1b19;
     border: none;
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: #d0bfa1;
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
 }
@@ -44,12 +44,12 @@ window#waybar.chromium {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px #d0bfa1;
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: #918175;
+    box-shadow: inset 0 -3px #d0bfa1;
 }
 
 #workspaces button.urgent {
@@ -57,8 +57,8 @@ window#waybar.chromium {
 }
 
 #mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    background-color: #918175;
+    border-bottom: 3px solid #d0bfa1;
 }
 
 #clock,
@@ -76,7 +76,7 @@ window#waybar.chromium {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    color: #ffffff;
+    color: #d0bfa1;
 }
 
 #window,
@@ -98,14 +98,14 @@ window#waybar.chromium {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #d0bfa1;
+        color: #1c1b19;
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #1c1b19;
+    color: #d0bfa1;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -114,7 +114,7 @@ window#waybar.chromium {
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: #1c1b19;
 }
 
 /*#cpu {}*/
@@ -128,7 +128,7 @@ label:focus {
 /*#network {}*/
 
 #network.disconnected {
-    color: #f53c3c;
+    color: #ef2f27;
 }
 
 /*#pulseaudio {}*/
@@ -150,7 +150,7 @@ label:focus {
 /*#temperature {}*/
 
 #temperature.critical {
-    color: #f53c3c;
+    color: #ef2f27;
 }
 
 /*#tray {}*/
@@ -158,14 +158,14 @@ label:focus {
 /*#idle_inhibitor {}*/
 
 #idle_inhibitor.activated {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #d0bfa1;
+    color: #1c1b19;
 }
 
 /*#mpd {}*/
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    background-color: #ef2f27;
 }
 
 #mpd.stopped {
