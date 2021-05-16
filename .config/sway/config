@@ -30,7 +30,7 @@ gaps outer 8
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/.wallpapers/black.jpg fill
+output * bg $HOME/.wallpapers/srcery-black.png fill
 #
 # Example configuration:
 #
@@ -96,20 +96,20 @@ input * accel_profile flat
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
-    # Lock screen
+    # Lock
     bindsym $mod+Shift+s+l exec ~/.bin/sway/lock-screen.sh
 
     # Hibernate
-    bindsym $mod+Shift+s+h exec swaynag -t warning -m 'Are you sure you want to hibernate?' -b 'Yes' 'systemctl hibernate'
-
-    # Force hibernate
-    bindsym $mod+Shift+s+h+f exec systemctl hibernate
+    bindsym $mod+Shift+s+h exec systemctl hibernate
     
     # Shutdown
-    bindsym $mod+Shift+s+x exec swaynag -t warning -m 'Are you sure you want to shutdown?' -b 'Yes' 'poweroff'
+    bindsym $mod+Shift+s+x exec poweroff
 
-    # Force shutdown
-    bindsym $mod+Shift+s+x+f exec poweroff
+    # Screenshot all
+    bindsym $mod+Shift+p+a exec grim ~/Pictures/$(date +%Y-%m-%d_%H-%m-%s).png
+
+    # Screenshot region
+    bindsym $mod+Shift+p+r exec grim -g "$(slurp)" ~/Pictures/$(date +%Y-%m-%d_%H-%m-%s).png
 
 #
 # Moving around:
