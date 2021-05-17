@@ -85,6 +85,9 @@ source $ZSH/oh-my-zsh.sh
 path+=("$HOME/.bin")
 export PATH
 
+# Allow alias autocompletion
+unsetopt completealiases
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
