@@ -104,6 +104,9 @@ input * accel_profile flat
     
     # Shutdown
     bindsym $mod+Shift+s+x exec poweroff
+    
+    # Reboot
+    bindsym $mod+Shift+s+r exec reboot
 
     # Screenshot all
     bindsym $mod+Shift+p+a exec grim ~/Pictures/$(date +%Y-%m-%d_%H-%m-%s).png
