@@ -118,7 +118,6 @@ hbox.tab-content[pinned=true] .tab-text {
 }
 
 #tabs-newtab-button {
-  list-style-image: url("add.svg") !important;
   opacity: 0.7;
 }
 
