@@ -46,6 +46,9 @@ set ttimeout
 " Configuration Reload
 nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 
+" Configuration Edit
+nnoremap <silent> <leader>ev :vs $MYVIMRC<CR>
+
 " Toggle Highlight
 nnoremap <silent><expr> <leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
@@ -67,6 +70,17 @@ function! QFixToggle(forced)
   endif
 endfunction
 noremap <silent> <leader>qf :QFix<CR>
+
+" Window Quit
+noremap <silent> <leader>wq :q<CR>
+
+" Window Kill (quit after deleting current buffer)
+noremap <silent> <leader>wk :bp<bar>sp<bar>bn<bar>bd<bar>q<CR>
+
+" Buffer Previous/Next/List
+nnoremap <silent> <leader>bp :bp<CR>
+nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <silent> <leader>bl :buffers<CR>
 
 " Buffer Delete/Kill then Next Buffer
 nnoremap <silent> <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
