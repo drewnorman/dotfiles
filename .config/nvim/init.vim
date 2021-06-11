@@ -16,6 +16,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'mhinz/vim-startify'
 Plug 'psliwka/vim-smoothie'
 Plug 'preservim/nerdcommenter'
+Plug 'skywind3000/asyncrun.vim'
 call plug#end()
 
 " General
@@ -45,11 +46,41 @@ set ttimeout
 " Configuration Reload
 nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 
+" Configuration Edit
+nnoremap <silent> <leader>ev :vs $MYVIMRC<CR>
+
 " Toggle Highlight
 nnoremap <silent><expr> <leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
 " Quick Save
 noremap <silent> <leader>ss :w<CR>
+
+" Quick Deploy
+noremap <silent> <leader>dd :let g:qfix_win = bufnr("$")<bar>AsyncRun bash/deploy.sh<CR>
+
+" Quick Fix Menu
+command! -bang -nargs=? QFix call QFixToggle(<bang>0)
+function! QFixToggle(forced)
+  if exists("g:qfix_win") && a:forced == 0
+    cclose
+    unlet g:qfix_win
+  else
+    copen 10
+    let g:qfix_win = bufnr("$")
+  endif
+endfunction
+noremap <silent> <leader>qf :QFix<CR>
+
+" Window Quit
+noremap <silent> <leader>wq :q<CR>
+
+" Window Kill (quit after deleting current buffer)
+noremap <silent> <leader>wk :bp<bar>sp<bar>bn<bar>bd<bar>q<CR>
+
+" Buffer Previous/Next/List
+nnoremap <silent> <leader>bp :bp<CR>
+nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <silent> <leader>bl :buffers<CR>
 
 " Buffer Delete/Kill then Next Buffer
 nnoremap <silent> <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
@@ -104,3 +135,6 @@ nnoremap <silent> <leader>lg :LazyGit<CR>
 " File Browser
 let g:ranger_map_keys = 0
 nnoremap <silent> <leader>fb :Ranger<CR>
+
+" Async Run
+let g:asyncrun_open = 8
