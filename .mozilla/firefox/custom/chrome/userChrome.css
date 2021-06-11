@@ -55,6 +55,7 @@
 
 .tab-background {
   border: none !important;
+  box-shadow: none !important;
 }
 
 .tabbrowser-arrowscrollbox {
@@ -187,6 +188,7 @@ hbox.tab-content[pinned=true] .tab-text {
 
 toolbar {
   background-image: none !important;
+  color: var(--mff-icon-color) !important;
 }
 
 #toolbar-menubar {
