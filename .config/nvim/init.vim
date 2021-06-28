@@ -109,7 +109,7 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --iglob !.git/'
 
 " Code Completion
 let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-phpls']
