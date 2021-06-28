@@ -17,6 +17,7 @@ Plug 'mhinz/vim-startify'
 Plug 'psliwka/vim-smoothie'
 Plug 'preservim/nerdcommenter'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'machakann/vim-sandwich'
 call plug#end()
 
 " General
