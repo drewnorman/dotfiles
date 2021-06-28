@@ -43,6 +43,9 @@ let g:lightline = { 'colorscheme': 'srcery', }
 set notimeout
 set ttimeout
 
+" Remap Leader Key
+let mapleader = ","
+
 " Configuration Reload
 nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 
