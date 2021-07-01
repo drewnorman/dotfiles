@@ -7,6 +7,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafOfTree/vim-vue-plugin'
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'mhinz/vim-signify'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'tmsvg/pear-tree'
