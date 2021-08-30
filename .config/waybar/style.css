@@ -58,6 +58,17 @@ window#waybar.chromium {
     border-bottom: 3px solid #d0bfa1;
 }
 
+#pulseaudio,
+#network,
+#battery {
+    font-size: 24px;
+}
+
+#cpu,
+#memory {
+    font-size: 20px;
+}
+
 #clock,
 #battery,
 #cpu,
