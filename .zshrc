@@ -124,6 +124,9 @@ alias lock-screen='.bin/sway/lock-screen.sh'
 # Create alias for bluetoothctl
 alias btctl='bluetoothctl'
 
+# Create alias for pulsemixer
+alias pamxr='pulsemixer'
+
 autoload -U +X bashcompinit && bashcompinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
