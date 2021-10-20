@@ -109,10 +109,10 @@ input * accel_profile flat
     bindsym $mod+Shift+s+r exec reboot
 
     # Screenshot all
-    bindsym $mod+Shift+p+a exec grim ~/Pictures/$(date +%Y-%m-%d_%H-%m-%s).png
+    bindsym $mod+Shift+p+a exec grim ~/pictures/$(date +%Y-%m-%d_%H-%m-%s).png
 
     # Screenshot region
-    bindsym $mod+Shift+p+r exec grim -g "$(slurp)" ~/Pictures/$(date +%Y-%m-%d_%H-%m-%s).png
+    bindsym $mod+Shift+p+r exec grim -g "$(slurp)" ~/pictures/$(date +%Y-%m-%d_%H-%m-%s).png
 
 #
 # Moving around:
