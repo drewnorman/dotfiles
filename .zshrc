@@ -127,6 +127,10 @@ alias btctl='bluetoothctl'
 # Create alias for pulsemixer
 alias pamxr='pulsemixer'
 
+# Create alias for exa
+alias ls="exa"
+alias lsa="exa -la"
+
 autoload -U +X bashcompinit && bashcompinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
