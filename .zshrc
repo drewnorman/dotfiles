@@ -121,6 +121,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Create alias for screen locking
 alias lock-screen='.bin/sway/lock-screen.sh'
 
+# Create alias for bluetoothctl
+alias btctl='bluetoothctl'
+
 autoload -U +X bashcompinit && bashcompinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
