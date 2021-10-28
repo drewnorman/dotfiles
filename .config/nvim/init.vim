@@ -18,6 +18,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'mhinz/vim-startify'
 Plug 'psliwka/vim-smoothie'
 Plug 'preservim/nerdcommenter'
+Plug 'preservim/tagbar'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'machakann/vim-sandwich'
 call plug#end()
@@ -37,6 +38,7 @@ autocmd FileType vue setlocal shiftwidth=2 tabstop=2
 set colorcolumn=80
 set textwidth=80
 filetype plugin on
+filetype plugin indent on
 
 " Theme
 colorscheme srcery
@@ -131,6 +133,9 @@ nmap gd <Plug>(coc-definition)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
 nmap gr <Plug>(coc-references)
+
+" Tagbar Toggle
+nnoremap <silent> <leader>tb :TagbarToggle<CR>
 
 " Git Line Status
 set updatetime=100
