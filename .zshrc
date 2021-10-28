@@ -138,3 +138,6 @@ autoload -U +X bashcompinit && bashcompinit
 
 # Source FZF.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Source z
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
