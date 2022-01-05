@@ -38,6 +38,7 @@ autocmd BufNewFile,BufRead *.vue set ft=vue
 autocmd FileType vue setlocal shiftwidth=2 tabstop=2
 set colorcolumn=80
 set textwidth=80
+set foldmethod=indent
 filetype plugin on
 filetype plugin indent on
 
