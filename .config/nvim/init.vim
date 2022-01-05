@@ -151,3 +151,12 @@ nnoremap <silent> <leader>fb :Ranger<CR>
 
 " Async Run
 let g:asyncrun_open = 8
+
+" Rust / Cargo
+let g:syntastic_rust_checkers = ['cargo']
+let g:rustfmt_autosave = 1
+nnoremap <silent> <leader>rsb :Cbuild<CR>
+nnoremap <silent> <leader>rsr :Crun<CR>
+nnoremap <silent> <leader>rst :Ctest<CR>
+nnoremap <silent> <leader>rsc :Cclean<CR>
+nnoremap <silent> <leader>rsd :Cdoc<CR>
