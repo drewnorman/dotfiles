@@ -85,6 +85,10 @@ source $ZSH/oh-my-zsh.sh
 path+=("$HOME/.bin")
 export PATH
 
+# prepare GPG
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
+
 # Allow alias autocompletion
 unsetopt completealiases
 
