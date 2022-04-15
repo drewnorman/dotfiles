@@ -43,6 +43,9 @@ set colorcolumn=80
 set textwidth=80
 set foldmethod=syntax
 set foldlevelstart=10
+if executable("rg") 
+    set grepprg=rg\ --vimgrep 
+endif
 filetype plugin on
 filetype plugin indent on
 
@@ -115,15 +118,27 @@ let g:NERDTreeStatusline = ''
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 nnoremap <silent> <leader>tr :NERDTreeToggle<CR>
 
+" Rg
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
+
 " Fuzzy Finder
-nnoremap <silent> <leader>ff :FZF<CR>
-nnoremap <silent> <leader>fi :Rg<CR>
+nnoremap <silent> <leader>ff :Files<CR>
+nnoremap <silent> <leader>fi :RG<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --iglob !.git/'
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " Code Completion
 let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-phpls']
