@@ -8,6 +8,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'sbdchd/neoformat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafOfTree/vim-vue-plugin'
+Plug 'jwalton512/vim-blade'
 Plug 'rust-lang/rust.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'mhinz/vim-signify'
