@@ -72,6 +72,9 @@ nnoremap <silent><expr> <leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls').
 " Quick Save
 noremap <silent> <leader>ss :w<CR>
 
+" Quick Build
+noremap <silent> <leader>bb :let g:qfix_win = bufnr("$")<bar>AsyncRun bash/build.sh<CR>
+
 " Quick Deploy
 noremap <silent> <leader>dd :let g:qfix_win = bufnr("$")<bar>AsyncRun bash/deploy.sh<CR>
 
