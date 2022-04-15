@@ -116,6 +116,9 @@ unsetopt completealiases
 # Unalias for graphicsmagick
 unalias gm
 
+# Create alias for exit
+alias q="exit"
+
 # Create alias for editing
 alias e='nvim'
 
