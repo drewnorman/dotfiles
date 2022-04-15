@@ -148,3 +148,5 @@ autoload -U +X bashcompinit && bashcompinit
 
 # Source z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
+[ -f "/home/drew/.ghcup/env" ] && source "/home/drew/.ghcup/env" # ghcup-env
