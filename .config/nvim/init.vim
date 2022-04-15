@@ -24,6 +24,7 @@ Plug 'preservim/tagbar'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'APZelos/blamer.nvim'
+Plug 'wincent/ferret'
 call plug#end()
 
 " General
