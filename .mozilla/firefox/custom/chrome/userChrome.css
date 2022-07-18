@@ -1,13 +1,13 @@
  :root {
    /* Minimum Firefox variables */
-  --mff-bg: #1c1b19;
-  --mff-icon-color: #d0bfa1;
+  --mff-bg: #ffffff;
+  --mff-icon-color: #1c1c1c;
   --mff-nav-toolbar-padding: 8px;
   --mff-sidebar-bg: var(--mff-bg);
   --mff-sidebar-color: var(--mff-icon-color);
   --mff-tab-border-radius: 0px;
   --mff-tab-color: var(--mff-icon-color);
-  --mff-tab-font-family: "Jetbrains Mono", sans;
+  --mff-tab-font-family: "Inconsolata Medium", sans;
   --mff-tab-font-size: 11pt;
   --mff-tab-font-weight: 400;
   --mff-tab-height: 32px;
@@ -17,11 +17,11 @@
   --mff-tab-soundplaying-bg: var(--mff-bg);
   --mff-urlbar-color: var(--mff-icon-color);
   --mff-urlbar-focused-color: var(--mff-icon-color);
-  --mff-urlbar-font-family: "Jetbrains Mono", serif;
+  --mff-urlbar-font-family: "Inconsolata Medium", serif;
   --mff-urlbar-font-size: 12pt;
   --mff-urlbar-font-weight: 400;
   --mff-urlbar-results-color: var(--mff-icon-color);
-  --mff-urlbar-results-font-family: "Jetbrains Mono", serif;
+  --mff-urlbar-results-font-family: "Inconsolata Medium", serif;
   --mff-urlbar-results-font-size: 12pt;
   --mff-urlbar-results-font-weight: 400;
   --mff-urlbar-results-url-color: var(--mff-icon-color);

@@ -1,6 +1,6 @@
 " Plugins
 call plug#begin('~/.vimplugins')
-Plug 'srcery-colors/srcery-vim'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -55,8 +55,23 @@ filetype plugin on
 filetype plugin indent on
 
 " Theme
-colorscheme srcery
-let g:lightline = { 'colorscheme': 'srcery', }
+set background=light
+colorscheme PaperColor
+highlight Normal guibg=white
+highlight LineNr guibg=white
+highlight ColorColumn guibg=lightgrey
+let g:lightline = {
+    \ 'colorscheme':'PaperColor_light'
+    \ }
+let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
+let s:palette.normal.middle = [
+    \ ['#4d4d4d', '#ffffff', 0, 15]
+\ ]
+let s:palette.normal.right = [
+    \ ['#4d4d4d', '#f5f5f5', 0, 15],
+    \ ['#4d4d4d', '#f5f5f5', 0, 15],
+    \ ['#4d4d4d', '#f5f5f5', 0, 15]
+\ ]
 
 " Disable Leader Timeout
 set notimeout
@@ -138,7 +153,7 @@ command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
 " Fuzzy Finder
 nnoremap <silent> <leader>ff :Files<CR>
-nnoremap <silent> <leader>fi :RG<CR>
+nnoremap <silent> <leader>fi :Rg<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',

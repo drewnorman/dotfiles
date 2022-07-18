@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Jetbrains Mono", monospace;
+    font-family: "Inconsolata Medium", monospace;
     font-size: 14px;
     min-height: 0;
 }
@@ -10,7 +10,7 @@
 window#waybar {
     padding: 20px;
     background-color: transparent;
-    color: #d0bfa1;
+    color: #1c1c1c;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -36,7 +36,7 @@ window#waybar.chromium {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #d0bfa1;
+    color: #1c1c1c;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -45,17 +45,18 @@ window#waybar.chromium {
 }
 
 #workspaces button.focused {
-    background-color: #d0bfa1;
-    color: #1c1b19;
+    background-color: #1c1c1c;
+    color: #ffffff;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #af0000;
+    color: #ffffff;
 }
 
 #mode {
     background-color: #918175;
-    border-bottom: 3px solid #d0bfa1;
+    border-bottom: 3px solid #1c1c1c;
 }
 
 #pulseaudio,
@@ -84,7 +85,7 @@ window#waybar.chromium {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    color: #d0bfa1;
+    color: #1c1c1c;
 }
 
 #window,
@@ -106,14 +107,14 @@ window#waybar.chromium {
 
 @keyframes blink {
     to {
-        background-color: #d0bfa1;
+        background-color: #1c1c1c;
         color: #1c1b19;
     }
 }
 
 #battery.critical:not(.charging) {
     background-color: #1c1b19;
-    color: #d0bfa1;
+    color: #1c1c1c;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -136,7 +137,8 @@ label:focus {
 /*#network {}*/
 
 #network.disconnected {
-    color: #ef2f27;
+    background-color: #af0000;
+    color: #ffffff;
 }
 
 /*#pulseaudio {}*/
@@ -147,18 +149,11 @@ label:focus {
     min-width: 100px;
 }
 
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
 /*#temperature {}*/
 
 #temperature.critical {
-    color: #ef2f27;
+    background-color: #af0000;
+    color: #ffffff;
 }
 
 /*#tray {}*/
@@ -166,22 +161,22 @@ label:focus {
 /*#idle_inhibitor {}*/
 
 #idle_inhibitor.activated {
-    background-color: #d0bfa1;
-    color: #1c1b19;
+    background-color: #1c1c1c;
+    color: #ffffff;
 }
 
 /*#mpd {}*/
 
 #mpd.disconnected {
-    background-color: #ef2f27;
+    background-color: #af0000;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    background-color: #1c1c1c;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    background-color: #008700;
 }
 
 #language {
