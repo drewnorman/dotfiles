@@ -97,22 +97,22 @@ set ttimeout
 let mapleader = ","
 
 " Configuration Reload
-nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Configuration Edit
-nnoremap <silent> <leader>ev :vs $MYVIMRC<CR>
+nnoremap <leader>ev :vs $MYVIMRC<CR>
 
 " Toggle Highlight
-nnoremap <silent><expr> <leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
+nnoremap <expr> <leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
 " Quick Save
-noremap <silent> <leader>ss :w<CR>
+noremap <leader>ss :w<CR>
 
 " Quick Build
-noremap <silent> <leader>bb :let g:qfix_win = bufnr("$")<bar>AsyncRun bash/build.sh<CR>
+noremap <leader>bb :let g:qfix_win = bufnr("$")<bar>AsyncRun bash/build.sh<CR>
 
 " Quick Deploy
-noremap <silent> <leader>dd :let g:qfix_win = bufnr("$")<bar>AsyncRun bash/deploy.sh<CR>
+noremap <leader>dd :let g:qfix_win = bufnr("$")<bar>AsyncRun bash/deploy.sh<CR>
 
 " Quick Fix Menu
 command! -bang -nargs=? QFix call QFixToggle(<bang>0)
@@ -125,29 +125,34 @@ function! QFixToggle(forced)
     let g:qfix_win = bufnr("$")
   endif
 endfunction
-noremap <silent> <leader>qf :QFix<CR>
+noremap <leader>qf :QFix<CR>
 
 " Window Quit
-noremap <silent> <leader>wq :q<CR>
+noremap <leader>wq :q<CR>
 
 " Window Kill (quit after deleting current buffer)
-noremap <silent> <leader>wk :bp<bar>sp<bar>bn<bar>bd<bar>q<CR>
+noremap <leader>wk :bp<bar>sp<bar>bn<bar>bd<bar>q<CR>
 
 " Buffer Previous/Next/List
-nnoremap <silent> <leader>bp :bp<CR>
-nnoremap <silent> <leader>bn :bn<CR>
-nnoremap <silent> <leader>bl :buffers<CR>
+nnoremap <leader>bp :bp<CR>
+nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bl :buffers<CR>
 
 " Buffer Delete/Kill then Next Buffer
-nnoremap <silent> <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
-nnoremap <silent> <leader>bk :bp<bar>sp<bar>bn<bar>bd!<CR>
+nnoremap <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
+nnoremap <leader>bk :bp<bar>sp<bar>bn<bar>bd!<CR>
 
 " Terminal
 autocmd TermOpen * startinsert
 function! OpenTerminal()
   vsplit term://zsh
 endfunction
-nnoremap <silent> <leader>te :call OpenTerminal()<CR>
+nnoremap <leader>te :call OpenTerminal()<CR>
+" tnoremap <Esc> <C-\><C-n>:bd!<CR>
+
+" Formatter
+let g:neoformat_try_node_exe = 1
+nnoremap <leader>fm :Neoformat<CR>
 
 " Project Tree
 let g:NERDTreeShowHidden = 1
@@ -155,7 +160,7 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-nnoremap <silent> <leader>tr :NERDTreeToggle<CR>
+nnoremap <leader>tr :NERDTreeToggle<CR>
 
 " Rg
 function! RipgrepFzf(query, fullscreen)
@@ -168,8 +173,8 @@ endfunction
 command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
 " Fuzzy Finder
-nnoremap <silent> <leader>ff :Files<CR>
-nnoremap <silent> <leader>fi :Rg<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fi :Rg<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
@@ -181,31 +186,23 @@ command! -bang -nargs=? -complete=dir Files
 
 " Code Completion
 let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-phpls']
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
 nmap gd <Plug>(coc-definition)
 nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
 nmap gr <Plug>(coc-references)
 
 " Tagbar Toggle
-nnoremap <silent> <leader>tb :TagbarToggle<CR>
+nnoremap <leader>tb :TagbarToggle<CR>
 
 " Git Line Status
 set updatetime=100
 
 " Git Tool
-nnoremap <silent> <leader>lg :LazyGit<CR>
+nnoremap <leader>lg :LazyGit<CR>
 
 " File Browser
 let g:ranger_map_keys = 0
-nnoremap <silent> <leader>fb :Ranger<CR>
+nnoremap <leader>fb :Ranger<CR>
 
 " Async Run
 let g:asyncrun_open = 8
@@ -213,8 +210,9 @@ let g:asyncrun_open = 8
 " Rust / Cargo
 let g:syntastic_rust_checkers = ['cargo']
 let g:rustfmt_autosave = 1
-nnoremap <silent> <leader>rsb :Cbuild<CR>
-nnoremap <silent> <leader>rsr :Crun<CR>
-nnoremap <silent> <leader>rst :Ctest<CR>
-nnoremap <silent> <leader>rsc :Cclean<CR>
-nnoremap <silent> <leader>rsd :Cdoc<CR>
+nnoremap <leader>rsb :Cbuild<CR>
+nnoremap <leader>rsr :Crun<CR>
+nnoremap <leader>rst :Ctest<CR>
+nnoremap <leader>rsc :Cclean<CR>
+nnoremap <leader>rsd :Cdoc<CR>
+
