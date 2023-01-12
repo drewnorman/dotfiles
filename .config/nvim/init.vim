@@ -19,6 +19,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'mhinz/vim-signify'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'tmsvg/pear-tree'
+Plug 'itchyny/vim-gitbranch'
 Plug 'itchyny/lightline.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
