@@ -66,7 +66,18 @@ highlight Normal guibg=white
 highlight LineNr guibg=white
 highlight ColorColumn guibg=lightgrey
 let g:lightline = {
-    \ 'colorscheme':'PaperColor_light'
+    \ 'colorscheme':'PaperColor_light',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'readonly', 'filename', 'modified' ] ],
+    \   'right': [ [ 'lineinfo' ],
+    \              [ 'percent' ],
+    \              [ 'fileformat ', 'fileencoding', 'filetype' ],
+    \              [ 'gitbranch' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'gitbranch#name'
+    \ },
     \ }
 let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
 let s:palette.normal.middle = [
