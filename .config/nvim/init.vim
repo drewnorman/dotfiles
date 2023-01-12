@@ -49,11 +49,15 @@ set colorcolumn=80
 set textwidth=80
 set foldmethod=syntax
 set foldlevelstart=10
+set shell=/usr/bin/zsh
 if executable("rg") 
     set grepprg=rg\ --vimgrep 
 endif
 filetype plugin on
 filetype plugin indent on
+
+" Aliases
+let $BASH_ENV = "~/.zsh_aliases"
 
 " Theme
 set background=light
