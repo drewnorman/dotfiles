@@ -113,30 +113,12 @@ unsetopt completealiases
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
 # Unalias for graphicsmagick
 unalias gm
 
-# Create alias for exit
-alias q="exit"
-
-# Create alias for editing
-alias e='nvim'
-
-# Create alias for dotfiles repository interaction
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-# Create alias for screen locking
-alias lock-screen='.bin/sway/lock-screen.sh'
-
-# Create alias for bluetoothctl
-alias btctl='bluetoothctl'
-
-# Create alias for pulsemixer
-alias pamxr='pulsemixer'
-
-# Create alias for exa
-alias ls="exa"
-alias lsa="exa -la"
+# Source aliases
+source ~/.zsh_aliases
 
 autoload -U +X bashcompinit && bashcompinit
 
