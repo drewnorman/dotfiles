@@ -1,8 +1,6 @@
 " Plugins
 call plug#begin('~/.vimplugins')
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'sbdchd/neoformat'
