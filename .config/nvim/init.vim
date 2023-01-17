@@ -23,6 +23,7 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-repeat'
+Plug 'ggandor/leap.nvim'
 Plug 'psliwka/vim-smoothie'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
@@ -203,6 +204,16 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" Leap
+nmap <leader>jj <Plug>(leap-forward-to)
+nmap <leader>jt <Plug>(leap-forward-till)
+nmap <leader>jJ <Plug>(leap-backward-to)
+nmap <leader>jT <Plug>(leap-backward-till)
+nmap <leader>jw <Plug>(leap-cross-window)
+lua require('leap').opts.case_sensitive = true
+lua require('leap').opts.special_keys.next_target = '<tab>' 
+lua require('leap').opts.special_keys.prev_target = '<s-tab>' 
 
 " Tagbar Toggle
 nnoremap <leader>tb :TagbarToggle<CR>
