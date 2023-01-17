@@ -206,11 +206,11 @@ function! CheckBackspace() abort
 endfunction
 
 " Leap
-nmap <leader>jj <Plug>(leap-forward-to)
-nmap <leader>jt <Plug>(leap-forward-till)
-nmap <leader>jJ <Plug>(leap-backward-to)
-nmap <leader>jT <Plug>(leap-backward-till)
-nmap <leader>jw <Plug>(leap-cross-window)
+map <leader>jj <Plug>(leap-forward-to)
+map <leader>jt <Plug>(leap-forward-till)
+map <leader>jJ <Plug>(leap-backward-to)
+map <leader>jT <Plug>(leap-backward-till)
+map <leader>jw <Plug>(leap-cross-window)
 lua require('leap').opts.case_sensitive = true
 lua require('leap').opts.special_keys.next_target = '<tab>' 
 lua require('leap').opts.special_keys.prev_target = '<s-tab>' 
