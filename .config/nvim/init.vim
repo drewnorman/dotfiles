@@ -93,6 +93,9 @@ set notimeout
 set ttimeout
 
 " Remap Leader Key
+nnoremap \ ,
+xnoremap \ ,
+onoremap \ ,
 let mapleader = ","
 
 " Configuration Reload
