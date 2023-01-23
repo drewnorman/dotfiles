@@ -234,9 +234,11 @@ map <leader>jt <Plug>(leap-forward-till)
 map <leader>jJ <Plug>(leap-backward-to)
 map <leader>jT <Plug>(leap-backward-till)
 map <leader>jw <Plug>(leap-cross-window)
-lua require('leap').opts.case_sensitive = true
-lua require('leap').opts.special_keys.next_target = '<tab>' 
-lua require('leap').opts.special_keys.prev_target = '<s-tab>' 
+lua <<EOF
+require('leap').opts.case_sensitive = true
+require('leap').opts.special_keys.next_target = '<tab>' 
+require('leap').opts.special_keys.prev_target = '<s-tab>' 
+EOF
 
 " Tagbar Toggle
 nnoremap <leader>tb :TagbarToggle<CR>
