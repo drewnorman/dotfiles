@@ -53,7 +53,6 @@ set shell=/usr/bin/zsh
 if executable("rg") 
     set grepprg=rg\ --vimgrep 
 endif
-filetype plugin on
 filetype plugin indent on
 
 " Aliases
