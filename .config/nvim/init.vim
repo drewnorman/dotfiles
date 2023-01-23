@@ -27,6 +27,7 @@ Plug 'ggandor/leap.nvim'
 Plug 'psliwka/vim-smoothie'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/tagbar'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'APZelos/blamer.nvim'
@@ -87,6 +88,29 @@ let s:palette.normal.right = [
     \ ['#4d4d4d', '#f5f5f5', 0, 15],
     \ ['#4d4d4d', '#f5f5f5', 0, 15]
 \ ]
+
+" Indentation Indicator
+lua <<EOF
+vim.opt.termguicolors = true
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#d70000 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#ffaf00 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent3 guifg=#5faf00 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent4 guifg=#5fafd7 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent5 guifg=#005faf gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent6 guifg=#ff5faf gui=nocombine]]
+vim.opt.list = false
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    char_highlight_list = {
+        "IndentBlanklineIndent1",
+        "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3",
+        "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5",
+        "IndentBlanklineIndent6",
+    },
+}
+EOF
 
 " Disable Leader Timeout
 set notimeout
